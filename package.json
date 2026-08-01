@@ -11,8 +11,9 @@
     "build": "tsc -b tsconfig.workspace.json",
     "decrypt:secret": "node scripts/decrypt-secret.mjs",
     "generate:key": "node scripts/generate-secret-key.mjs",
-    "test:orangehrm": "playwright test -c playwright.config.ts",
-    "test:orangehrm:headed": "playwright test -c playwright.config.ts --headed",
+    "test:orangehrm": "cross-env env=qat playwright test -c playwright.config.ts",
+
+    "test:orangehrm:headed": "cross-env env=qat playwright test -c playwright.config.ts --headed",
     "test:all": "npm run test --workspaces --if-present",
     "encrypt:secret": "node scripts/encrypt-secret.mjs",
     "typecheck": "tsc -b tsconfig.workspace.json"
@@ -20,14 +21,9 @@
   "devDependencies": {
     "@playwright/test": "^1.59.1",
     "@types/node": "^25.6.0",
-    "@types/xmldom": "^0.1.34",
     "cross-env": "^10.1.0",
+    "dotenv": "^17.4.2",
     "prettier": "^3.3.1",
     "typescript": "^5.2.2"
-  },
-  "dependencies": {
-    "properties-reader": "^3.0.1",
-    "xmldom": "^0.6.0",
-    "xpath": "^0.0.34"
   }
 }

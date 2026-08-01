@@ -6,5 +6,4 @@ export * from './utils/dataLoader.js';
 export * from './utils/logger.js';
 export * from './utils/path.js';
 export * from './utils/beanLoader.js';
-export * from './utils/propertiesLoader.js';
 export * from './utils/testTags.js';

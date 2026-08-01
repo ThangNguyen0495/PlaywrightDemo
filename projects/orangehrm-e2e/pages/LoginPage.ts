@@ -1,5 +1,11 @@
 import type { Page } from '@playwright/test';
-import { BasePage, Button, getLogger, Label, Textbox } from '@core-playwright/core';
+import {
+  BasePage,
+  Button,
+  getLogger,
+  Label,
+  Textbox,
+} from '@core-playwright/core';
 
 const logger = getLogger('orangehrm.page.login');
 
